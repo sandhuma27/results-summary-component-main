@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Result Summary</title>
+    <link
+      rel="stylesheet"
+      href="https://fonts.google.com/specimen/Hanken+Grotesk"
+    />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        background: #edf2ff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        font-family: "Hanken Grotesk", sans-serif;
+        font-size: 18px;
+      }
+
+      .card {
+        display: flex;
+        background: white;
+        border-radius: 20px;
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+        overflow: hidden;
+        max-width: 700px;
+        width: 100%;
+      }
+
+      /* Left Result Section */
+      .result {
+        flex: 1;
+        background: linear-gradient(
+          to bottom,
+          hsla(256, 72%, 46%, 1),
+          hsl(241, 81%, 54%)
+        );
+        color: white;
+        text-align: center;
+        padding: 2rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
+
+      .result h2 {
+        font-size: 1.2rem;
+        font-weight: 500;
+        margin-bottom: 1rem;
+      }
+
+      .circle {
+        background: linear-gradient(hsla(256, 72%, 46%, 1), hsl(234, 85%, 45%));
+        border-radius: 100%;
+        width: 140px;
+        height: 140px;
+        margin: 0 auto 1.5rem auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        font-size: 2rem;
+        font-weight: bold;
+      }
+
+      .circle span {
+        font-size: 0.8rem;
+        font-weight: normal;
+        opacity: 0.8;
+      }
+
+      .result h3 {
+        font-size: 1.4rem;
+        margin-bottom: 0.5rem;
+      }
+
+      .result p {
+        font-size: 0.9rem;
+        opacity: 0.8;
+      }
+
+      .summary {
+        flex: 1;
+        padding: 2rem;
+      }
+
+      .summary h2 {
+        font-size: 1.2rem;
+        margin-bottom: 1.5rem;
+        color: #222;
+      }
+
+      .item {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background: #f9fafc;
+        padding: 12px 15px;
+        border-radius: 10px;
+        margin-bottom: 1rem;
+        font-size: 0.95rem;
+        font-weight: 500;
+      }
+
+      .item span {
+        opacity: 0.8;
+        color: black;
+      }
+
+      .reaction {
+        background: #fff6f6;
+        color: hsl(0, 100%, 67%);
+      }
+      .memory {
+        background: #fffdea;
+        color: hsl(39, 100%, 56%);
+      }
+      .verbal {
+        background: #e9fdf5;
+        color: hsl(166, 100%, 37%);
+      }
+      .visual {
+        background: #f1f1fe;
+        color: hsl(234, 85%, 45%);
+      }
+
+      .btn {
+        width: 100%;
+        background: #222;
+        color: white;
+        border: none;
+        border-radius: 25px;
+        padding: 12px;
+        font-size: 1rem;
+        font-weight: 500;
+        cursor: pointer;
+        margin-top: 1rem;
+        transition: background 0.3s;
+      }
+
+      .btn:hover {
+        background: #5f5e5e;
+      }
+      .item {
+        cursor: pointer;
+      }
+      .reaction:hover {
+        background-color: #d9444455;
+      }
+      .memory:hover {
+        background-color: #d1a4005a;
+      }
+      .verbal:hover {
+        background-color: #2da57b6b;
+      }
+      .visual:hover {
+        background-color: #6759e37c;
+      }
+
+      /* Responsive */
+      @media (max-width: 700px) {
+        .card {
+          flex-direction: column;
+          max-width: 90%;
+        }
+
+        .result {
+          border-radius: 20px 20px 0 0;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="card">
+      <div class="result">
+        <h2>Your Result</h2>
+        <div class="circle">76 <span>of 100</span></div>
+        <h3>Great</h3>
+        <p>
+          You scored higher than 65% of the people who have taken these tests.
+        </p>
+      </div>
+
+      <!-- Right -->
+      <div class="summary">
+        <h2>Summary</h2>
+        <div class="item reaction">
+          <img src="./assets/images/icon-reaction.svg" alt="" />
+          <div style="margin-right: 90px">Reaction</div>
+          <span><b>80</b> / 100</span>
+        </div>
+        <div class="item memory">
+          <img src="./assets/images/icon-memory.svg" alt="memory" />
+          <div style="margin-right: 90px">Memory</div>
+          <span><b>92</b> / 100</span>
+        </div>
+        <div class="item verbal">
+          <img src="./assets/images/icon-verbal.svg" alt="verbal" />
+          <div style="margin-right: 100px">Verbal</div>
+          <span><b>61</b> / 100</span>
+        </div>
+        <div class="item visual">
+          <img src="./assets/images/icon-visual.svg" alt="visual" />
+          <div style="margin-right: 90px">Visual</div>
+          <span><b>73</b> / 100</span>
+        </div>
+        <button class="btn">Continue</button>
+      </div>
+    </div>
+  </body>
+</html>
